@@ -1,0 +1,45 @@
+header {
+  background-color: rgb(148, 148, 253);
+  padding: 1rem;
+  color: #fff;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+    .user-actions {
+      display: flex;
+      font-size: 1.2rem;
+
+      .user-login-logout {
+        margin: 0 2rem;
+      }
+    }
+
+    .search-bar {
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input[type="text"] {
+          width: 25rem;
+          padding: 0.9rem;
+          border: 0;
+          outline: none;
+        }
+
+        button {
+          padding: 0.64rem 0.9rem;
+          border: 0;
+          color: #fff;
+          font-size: 1.2rem;
+          background-color: rgb(94, 94, 160);
+        }
+      }
+    }
+  }
+}

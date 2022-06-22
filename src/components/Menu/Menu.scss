@@ -1,0 +1,25 @@
+.menu {
+  background-color: rgb(255, 255, 255);
+  // padding: 1rem;
+  color: white;
+  box-shadow: 0 1px 5px rgba($color: black, $alpha: 0.2);
+
+  .menu-list {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+
+    .menu-links {
+      text-decoration: none;
+      text-align: center;
+      padding: 1rem 3rem;
+      transition: 0.1s all;
+
+      &:hover {
+        transition: 0.2s all;
+        background-color: rgb(88, 174, 255);
+        color: #fff;
+      }
+    }
+  }
+}
