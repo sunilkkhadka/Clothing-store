@@ -19,9 +19,13 @@ const AllProducts = () => {
     <div className="product-component">
       <h1>Just For You</h1>
       <Slider {...settings}>
-        {allProducts.map((product) => {
+        {allProducts.map((product, index) => {
           return (
-            <Link to={"/"} className="product-card">
+            <Link
+              to={`/product/${product.id}`}
+              key={index}
+              className="product-card"
+            >
               <div className="product-img">
                 <img src={product.image} alt={product.title} />
               </div>

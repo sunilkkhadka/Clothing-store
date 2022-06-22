@@ -11,7 +11,6 @@ export const getAllProducts = createAsyncThunk(
     try {
       let response = await fetch(storeURL);
       let data = await response.json();
-      console.log(data);
       return data;
     } catch (error) {
       console.log(error);
@@ -26,7 +25,6 @@ export const getAllCategories = createAsyncThunk(
     try {
       let category_response = await fetch(`${storeURL}/categories`);
       let category_data = await category_response.json();
-      // console.log(category_data);
       return category_data;
     } catch (error) {
       console.log(error);
@@ -43,8 +41,24 @@ export const getSliderProducts = createAsyncThunk(
         "https://fakestoreapi.com/products?limit=7"
       );
       let slider_data = await slider_response.json();
-      console.log(slider_data);
       return slider_data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+);
+
+//GET PRODUCT BY ID
+export const getProductById = createAsyncThunk(
+  "clothes/getProductById",
+  async (product_id) => {
+    try {
+      let response = await fetch(
+        `https://fakestoreapi.com/products/${product_id}`
+      );
+      let data = response.json();
+      console.log(data);
+      return data;
     } catch (error) {
       console.log(error);
     }
@@ -57,6 +71,7 @@ const ClotheStore = createSlice({
     clothe: [],
     categories: [],
     slider: [],
+    productById: [],
     isLoading: false,
   },
   extraReducers: {
@@ -76,6 +91,10 @@ const ClotheStore = createSlice({
     },
     [getSliderProducts.fulfilled]: (state, action) => {
       state.slider = action.payload;
+      state.isLoading = false;
+    },
+    [getProductById.fulfilled]: (state, action) => {
+      state.productById = action.payload;
       state.isLoading = false;
     },
   },

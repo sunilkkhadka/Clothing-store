@@ -10,6 +10,7 @@ import {
   getAllCategories,
   getSliderProducts,
 } from "../../features/clotheStore/ClotheStore";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,9 @@ const Header = () => {
   return (
     <header>
       <div className="header-content">
-        <div className="logo">MyStore</div>
+        <div className="logo">
+          <Link to={"/"}>My store</Link>
+        </div>
         <div className="search-bar">
           <form>
             <input type="text" placeholder="Search..." />
