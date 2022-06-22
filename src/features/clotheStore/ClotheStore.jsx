@@ -9,7 +9,7 @@ export const getAllProducts = createAsyncThunk(
   "clothes/getAllProducts",
   async () => {
     try {
-      let response = await fetch();
+      let response = await fetch(storeURL);
       let data = await response.json();
       console.log(data);
       return data;

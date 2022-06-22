@@ -1,0 +1,48 @@
+.product-component {
+  width: 90%;
+  margin: 5rem auto;
+  background-color: #fff;
+
+  h1 {
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: blue;
+  }
+
+  .product-card {
+    text-decoration: none;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid rgb(231, 231, 231);
+    transition: 0.2s all;
+
+    .product-description {
+      h1 {
+        padding: 0.7rem 0;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      h5 {
+        margin-top: 0.3rem;
+        padding: 0.2rem 0.5rem;
+        background-color: #ccc;
+        width: fit-content;
+        color: #444;
+        border-radius: 0.5rem;
+      }
+    }
+
+    img {
+      height: 15rem;
+      width: 10rem;
+      object-fit: contain;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
